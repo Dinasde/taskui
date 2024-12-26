@@ -29,7 +29,7 @@ function Schedule() {
 
   const fetchAdminData = async () => {
     try {
-      const result = await axiosInstance.post('/user/admin', admin);
+      const result = await axiosInstance.get('/user/admin', admin);
       // const result = await axios.get('http://localhost:3001/api/user/admin');
       console.log(result.data.result)
       setAdmin(result.data.result)
